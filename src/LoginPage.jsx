@@ -166,7 +166,7 @@ function LoginPage() {
             .then((username) => {
               localStorage.setItem("username", username);
               setTimeout(() => {
-                window.location.replace("/");
+                window.location.replace("/justvibe");
               }, 1000);
             });
         } else {
