@@ -1,0 +1,66 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: rgb(32, 35, 36);
+  color: white;
+}
+
+#container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+#body {
+  display: flex;
+  width: 100%;
+  height: calc(100vh - 60px);
+  background-color: rgb(32, 35, 36);
+  padding: 0;
+  overflow: auto;
+}
+
+.main-content {
+  flex-grow: 1;
+  padding: 20px;
+  padding-bottom: 120px; /* Add space for music player (90px height + 30px bottom margin) */
+  transition: margin-left 0.3s ease;
+  margin-left: 85px;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #27272a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #52525b;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #71717a;
+}
+
+/* Responsive adjustments for music player */
+@media (max-width: 768px) {
+  .main-content {
+    padding-bottom: 100px; /* Reduced padding for mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .main-content {
+    padding-bottom: 90px; /* Further reduced padding for small mobile */
+  }
+}

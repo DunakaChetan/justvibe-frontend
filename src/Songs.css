@@ -1,0 +1,374 @@
+.songs-page-animated-pro {
+  padding: 60px;
+  color: #f8f8f8;
+  background: radial-gradient(circle, #2c2c2c, #181818);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+.album-header-animated-pro {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  padding-bottom: 50px;
+  border-bottom: 3px solid #555;
+  margin-bottom: 60px;
+  width: 90%;
+  max-width: 1100px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.7);
+  border-radius: 25px;
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 40px;
+  animation: headerFadeIn 0.8s ease-out forwards;
+}
+
+@keyframes headerFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.album-cover-container-pro {
+  border-radius: 25px;
+  overflow: hidden;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.8);
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.album-cover-container-pro:hover {
+  transform: scale(1.1) rotate(-3deg);
+}
+
+.album-cover-animated-pro {
+  width: 220px;
+  height: 220px;
+  border-radius: 25px;
+  display: block;
+}
+
+.album-info-animated-pro {
+  flex-grow: 1;
+  text-align: left;
+}
+
+.album-title-animated-pro {
+  font-size: 48px;
+  margin-bottom: 18px;
+  color: #fff;
+  letter-spacing: 1.8px;
+  text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.9);
+}
+
+.album-artist-animated-pro {
+  font-size: 24px;
+  color: #ddd;
+  font-style: italic;
+  opacity: 0.9;
+}
+
+.song-list-animated-pro {
+  list-style: none;
+  padding: 0;
+  width: 90%;
+  max-width: 1100px;
+}
+
+.song-item-animated-pro {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 22px 30px;
+  border-bottom: 1px solid #666;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out, transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  animation: songItemSlideIn 0.5s ease-out forwards;
+  opacity: 0;
+  transform: translateX(-30px);
+}
+
+.song-item-animated-pro:nth-child(even) {
+  transform: translateX(30px);
+  animation-delay: 0.1s;
+}
+
+.song-item-animated-pro:nth-child(3n) {
+  animation-delay: 0.2s;
+}
+
+@keyframes songItemSlideIn {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.song-item-animated-pro:last-child {
+  border-bottom: none;
+}
+
+.song-item-animated-pro:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+.song-number-animated-pro {
+  font-size: 22px;
+  color: #aaa;
+  margin-right: 25px;
+  width: 50px;
+  text-align: right;
+}
+
+.song-title-animated-pro {
+  flex-grow: 1;
+  font-size: 20px;
+  color: #eee;
+}
+
+.song-actions-pro {
+  display: flex;
+  gap: 20px;
+}
+
+.play-btn-animated-pro {
+  background: rgba(255, 140, 0, 0.9);
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: white;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.download-btn-animated-pro {
+  background: rgba(255, 140, 0, 0.1);
+  border: 1px solid rgba(255, 140, 0, 0.2);
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  overflow: hidden;
+}
+
+.play-btn-animated-pro svg {
+  width: 20px;
+  height: 20px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.play-btn-animated-pro:hover {
+  transform: scale(1.1);
+  background: rgb(255, 140, 0);
+  box-shadow: 0 0 15px rgba(255, 140, 0, 0.5);
+}
+
+.download-btn-animated-pro:hover {
+  background: rgb(255, 140, 0);
+  transform: scale(1.2) rotate(5deg);
+  box-shadow: 0 0 20px rgba(255, 140, 0, 0.4);
+}
+
+.play-btn-animated-pro:active {
+  transform: scale(0.95);
+}
+
+/* Animation for icon change */
+.play-btn-animated-pro svg {
+  animation: iconPop 0.3s ease;
+}
+
+@keyframes iconPop {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Pulse animation for playing state */
+.play-btn-animated-pro.playing {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 140, 0, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(255, 140, 0, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 140, 0, 0);
+  }
+}
+
+/* Add a ripple effect on click */
+.play-btn-animated-pro::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  background-image: radial-gradient(circle, #fff 10%, transparent 10.01%);
+  background-repeat: no-repeat;
+  background-position: 50%;
+  transform: scale(10, 10);
+  opacity: 0;
+  transition: transform .5s, opacity 1s;
+}
+
+.play-btn-animated-pro:active::after {
+  transform: scale(0, 0);
+  opacity: .3;
+  transition: 0s;
+}
+
+.download-btn-animated-pro {
+  position: relative;
+  overflow: hidden;
+}
+
+.download-btn-animated-pro:hover .download-icon-animated-pro {
+  transform: translateY(3px);
+}
+
+.download-icon-animated-pro {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.download-effect-animated-pro {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(255, 140, 0, 0.3), transparent);
+  opacity: 0;
+  transform: translateY(-100%);
+  transition: transform 0.4s cubic-bezier(0.455, 0.03, 0.515, 0.955), opacity 0.3s ease-in-out;
+  border-radius: 50%;
+}
+
+.download-btn-animated-pro:hover .download-effect-animated-pro {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.songs-page-animated-pro {
+  opacity: 0;
+  transform: scale(0.95);
+  animation: fadeInScaleUp 0.7s ease-out forwards 0.4s;
+}
+
+@keyframes fadeInScaleUp {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.like-btn-animated-pro,
+.add-btn-animated-pro {
+  background: none;
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+  color: #b3b3b3;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.like-btn-animated-pro:hover,
+.add-btn-animated-pro:hover {
+  color: rgb(255, 140, 0);
+  transform: scale(1.2) rotate(5deg);
+}
+
+.like-btn-animated-pro.liked,
+.add-btn-animated-pro.added {
+  color: rgb(255, 140, 0);
+}
+
+.like-btn-animated-pro svg,
+.add-btn-animated-pro svg {
+  width: 24px;
+  height: 24px;
+  transition: all 0.3s ease;
+}
+
+.like-btn-animated-pro:hover svg,
+.add-btn-animated-pro:hover svg {
+  transform: scale(1.2);
+  filter: drop-shadow(0 0 5px rgba(255, 140, 0, 0.5));
+}
+
+/* Album download button styles */
+.album-actions {
+  margin-top: 15px;
+}
+
+.album-download-btn {
+  background: linear-gradient(135deg, rgba(255, 140, 0, 0.1) 0%, rgba(255, 123, 47, 0.1) 100%);
+  border: 2px solid rgba(255, 140, 0, 0.3);
+  color: rgb(255, 140, 0);
+  padding: 12px 20px;
+  border-radius: 12px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Arial', sans-serif;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+}
+
+.album-download-btn:hover {
+  background: linear-gradient(135deg, rgba(255, 140, 0, 0.2) 0%, rgba(255, 123, 47, 0.2) 100%);
+  border-color: rgba(255, 140, 0, 0.5);
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3), 0 0 15px rgba(255, 140, 0, 0.2);
+}
+
+.album-download-btn svg {
+  font-size: 1rem;
+  filter: drop-shadow(0 0 4px rgba(255, 140, 0, 0.6));
+}

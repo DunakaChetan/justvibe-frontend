@@ -1,0 +1,282 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.login-wrapper {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  font-family: "Poppins", serif;
+  justify-content: center;
+  align-items: center;
+  background: rgba(22, 21, 21, 0.9);
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: url('/Images/Mountain.jpsg') no-repeat;
+  background-size: cover;
+  background-position: center;
+  z-index: 1000;
+}
+
+.logout-icon {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 24px;
+  color: rgb(255, 115, 0);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.logout-icon:hover {
+  color: white;
+}
+
+form {
+  width: 400px;
+  /*background: rgba(44, 44, 44, 0.9);*/
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  color: white;
+  border-radius: 10px;
+  padding: 70px 40px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 36px;
+  margin-bottom: 50px;
+  color: rgb(255, 115, 0);
+}
+
+.field {
+  position: relative;
+  width: 100%;
+  height: 60px;
+  margin: 20px 0;
+}
+
+.inp {
+  width: 100%;
+  color: white;
+  font-size: 16px;
+  caret-color: rgb(255, 115, 0);
+  outline: none;
+  padding: 0 25px 5px 0;
+  border-bottom: 1px solid #ffffff54;
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  padding: 15px 45px 15px 20px;
+  border-radius: 25px;
+}
+
+.inpass{
+  width: 100%;
+  color: white;
+  font-size: 16px;
+  caret-color: rgb(255, 115, 0);
+  outline: none;
+  padding: 0 25px 5px 0;
+  border-bottom: 1px solid #ffffff54;
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  padding: 15px 70px 15px 20px;
+  border-radius: 25px;
+}
+
+.inp:focus {
+  border-color: rgb(255, 115, 0);
+  box-shadow: 0 0 23px rgba(255, 115, 0, 0.5);
+}
+
+.inpass:focus {
+  border-color: rgb(255, 115, 0);
+  box-shadow: 0 0 23px rgba(255, 115, 0, 0.5);
+}
+
+.label {
+  position: absolute;
+  left: 25px;
+  bottom: 22px;
+  z-index: -1;
+  color: white;
+  transition: transform 0.3s ease-in-out, color 0.3s ease-in-out, font-size 0.3s ease-in-out;
+}
+
+.inp:focus ~ .label,
+.inp:valid ~ .label  {
+  transform: translateY(-40px);
+  font-size: 15px;
+  color: #c3c3c3;
+}
+
+.inpass:focus ~ .label,
+.inpass:valid ~ .label  {
+  transform: translateY(-40px);
+  font-size: 15px;
+  color: #c3c3c3;
+}
+
+.field .icon {
+  position: absolute;
+  right: 15px;
+  top: 43%;
+  transform: translateY(-50%);
+  font-size: 18px;
+  color: white;
+}
+
+.eye-icon {
+  position: absolute;
+  right: 42px;
+  top: 45%;
+  transform: translateY(-50%);
+  font-size: 20px;
+  color: white;
+  cursor: pointer;
+}
+
+.remember-forgot {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  margin: 10px 0;
+}
+
+.remember-forgot label input {
+  accent-color: rgb(255, 115, 0);
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.remember-forgot a {
+  color: white;
+  text-decoration: none;
+}
+
+.remember-forgot a:hover {
+  text-decoration: underline;
+}
+
+.login-button {
+  width: 100%;
+  height: 40px;
+  background: transparent;
+  border: 2px solid rgb(255, 115, 0);
+  color: rgb(255, 115, 0);
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 10px;
+  transition: 0.3s;
+}
+
+.login-button:hover {
+  background: rgb(255, 115, 0);
+  color: black;
+}
+
+.register-link {
+  font-size: 14px;
+  margin: 15px 0;
+}
+
+.register-link a {
+  color: rgb(255, 115, 0);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.register-link a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 480px) {
+  form {
+    width: 90%;
+    padding: 50px 20px;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  .field {
+    height: 50px;
+    margin: 15px 0;
+  }
+
+  .inp {
+    font-size: 14px;
+    padding: 12px 40px 12px 15px;
+  }
+
+  .inpass{
+    font-size: 14px;
+    padding: 12px 70px 12px 15px;
+  }
+
+  .label{
+    bottom: 15px;
+  }
+
+  .inp:focus ~ .label,
+  .inp:valid ~ .label  {
+    transform: translateY(-34px);
+  }
+
+  .inpass:focus ~ .label,
+  .inpass:valid ~ .label  {
+    transform: translateY(-34px);
+  }
+
+  .icon {
+    font-size: 16px;
+  }
+
+  .eye-icon {
+    right: 43px;
+    font-size: 18px;
+  }
+
+  .remember-forgot {
+    font-size: 12px;
+  }
+
+  .login-button {
+    height: 35px;
+    font-size: 14px;
+  }
+
+  .register-link {
+    font-size: 12px;
+  }
+}
+
+.message {
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 4px;
+  text-align: center;
+  font-weight: 500;
+}
+
+.message.success {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.message.error {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}

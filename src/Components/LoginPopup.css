@@ -1,0 +1,96 @@
+.login-popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    animation: fadeIn 0.3s ease;
+}
+
+.login-popup-content {
+    background-color: #1a1a1a;
+    padding: 2rem;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    animation: slideIn 0.3s ease;
+}
+
+.login-popup-content h2 {
+    color: #ffffff;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.login-popup-content p {
+    color: #b3b3b3;
+    margin-bottom: 2rem;
+}
+
+.login-popup-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.login-button-p, .close-button {
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 25px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.login-button-p {
+  background: transparent;
+  border: 2px solid rgb(255, 115, 0);
+  color: rgb(255, 115, 0);
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.login-button-p:hover {
+  background: rgb(255, 115, 0);
+  color: black;
+  transform: scale(1.05);
+}
+
+.close-button {
+    background-color: #333;
+    color: white;
+}
+
+.close-button:hover {
+    background-color: #444;
+    transform: scale(1.05);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+} 

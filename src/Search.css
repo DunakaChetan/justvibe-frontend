@@ -1,0 +1,267 @@
+/* Search.css */
+.search-results-page {
+    padding: 3rem;
+    color: #e0e0e0; /* Lighter text for better contrast */
+    background-color: #121212; /* Deeper background */
+    min-height: 100vh; /* Ensure it fills the viewport */
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.search-results-page h2 {
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+    color: #ffb347; /* A more vibrant orange */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+    opacity: 0;
+    transform: translateY(-10px);
+    animation: fadeInDown 0.4s ease-out forwards;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.term {
+    color: #fdd835; /* A brighter yellow for emphasis */
+    font-weight: bold;
+}
+
+.result-list {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 1rem;
+}
+
+.result-list li {
+    margin-bottom: 1.2rem;
+    background-color: #1e1e1e;
+    padding: 1.2rem 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    border-left: 5px solid #ff8f00; /* Highlight on the left */
+    opacity: 0;
+    transform: translateY(10px);
+    animation: fadeInUp 0.3s ease-out forwards var(--delay);
+}
+
+.result-list li:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    background-color: #282828;
+}
+
+.result-link {
+    color: #eee;
+    text-decoration: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.result-name {
+    font-weight: 600;
+    font-size: 1.1rem;
+    flex-grow: 1; /* Allow name to take more space */
+}
+
+.result-type {
+    margin-left: 1rem;
+    color: #9e9e9e;
+    font-size: 0.9rem;
+    font-style: italic;
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 0.3rem 0.6rem;
+    border-radius: 5px;
+}
+
+.no-results {
+    color: #757575;
+    font-style: italic;
+    font-size: 1.1rem;
+    padding: 1rem;
+    background-color: #1e1e1e;
+    border-radius: 8px;
+    opacity: 0;
+    animation: fadeIn 0.3s ease-out forwards 0.2s;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Default content when no search term */
+.default-content {
+    padding: 2rem 0;
+}
+
+.default-content h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #f0f0f0;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(-10px);
+    animation: fadeInDown 0.4s ease-out forwards 0.2s; /* Delay to appear after page load */
+}
+
+.default-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 1rem;
+    opacity: 0;
+    animation: fadeIn 0.3s ease-out forwards 0.4s; /* Delay after heading */
+}
+
+.default-album-card {
+    background-color: #1e1e1e;
+    border-radius: 12px;
+    padding: 1.2rem;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    text-decoration: none;
+    color: #e0e0e0;
+}
+
+.default-album-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+    background-color: #282828;
+}
+
+.album-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 0.8rem;
+}
+
+.album-title {
+    font-size: 1.1rem;
+    margin: 0.6rem 0 0.3rem;
+    font-weight: 600;
+    color: #f0f0f0;
+}
+
+.album-artist {
+    color: #9e9e9e;
+    font-size: 0.9rem;
+    margin-bottom: 0.6rem;
+}
+
+.album-songs-preview {
+    padding-left: 1rem;
+    color: #bdbdbd;
+    font-size: 0.85rem;
+    list-style-type: disc;
+    margin-top: 0.5rem;
+}
+
+.album-songs-preview li {
+    margin-bottom: 0.3rem;
+}
+
+.search-bar-container {
+    width: 100%; /* Adjust width as needed */
+    max-width: 2000px; /* Maximum width */
+    margin-bottom: 2rem; /* Spacing below the search bar */
+    display: flex; /* Enable flexbox for centering */
+    justify-content: center; /* Center the content horizontally */
+}
+
+.animated-search-input {
+    width: 40%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    background: #1e1e1e;
+    border-radius: 30px;
+    padding: 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    border: 2px solid #ffe066; /* yellow border as in your image */
+    transition: box-shadow 0.3s, border-color 0.3s;
+    overflow: hidden;
+}
+
+.animated-search-input:focus-within {
+    box-shadow: 0 0 8px #ffe066;
+    border-color: #ffe066;
+}
+
+.animated-search-input .search-icon {
+    position: absolute;
+    left: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #ffe066;
+    font-size: 1.2rem;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.animated-search-input .search-input {
+    width: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #eee;
+    font-size: 1rem;
+    padding: 0.8rem 1rem 0.8rem 2.5rem; /* left padding for icon */
+    border-radius: 30px;
+}
+
+.animated-search-input .search-input::placeholder {
+    color: #777;
+    font-style: italic;
+}
+
+.search-result-image-wrapper { /* NEW CLASS NAME */
+    width: 80px; /* Adjust image size */
+    height: 80px; /* Adjust image size */
+    border-radius: 10px; /* Rounded image corners */
+    overflow: hidden;
+    margin-right: 1.5rem;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+    animation: fadeInSearchResultImage 0.3s ease-out forwards; /* Fade in animation */
+}
+
+@keyframes fadeInSearchResultImage {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.search-result-image { /* NEW CLASS NAME */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
