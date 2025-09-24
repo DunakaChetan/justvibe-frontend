@@ -83,7 +83,7 @@ function Header() {
     return (
         <div id='header'>
             <div id='logo' onClick={homepage}>
-                <span>Just</span>Vibe
+                <span>Music</span>Vibe
             </div>
             <div id='userinfo'>
                 <div className="animated-search-icon" onClick={handleSearchIconClick}>
