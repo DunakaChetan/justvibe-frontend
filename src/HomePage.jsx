@@ -80,7 +80,7 @@ function HomePage({ albums = [], isLoading, error, setSelectedTrack }) {
                         <>
                             <h1>{currentHeroAlbum.title}</h1>
                             <p className="hero-artist">By {currentHeroAlbum.artist}</p>
-                            <p>{currentHeroAlbum.description || 'Explore the latest tracks from this album.'}</p>
+                            <p>{currentHeroAlbum.description || 'Welcome to JustVibe.'}</p>
                             <div className="hero-buttons">
                                 <button onClick={() => goToAlbumById(currentHeroAlbum)}>
                                     <FontAwesomeIcon icon={faPlayCircle} /> Play Album
